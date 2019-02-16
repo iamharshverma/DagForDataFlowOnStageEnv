@@ -81,7 +81,7 @@ hive_job_staging_feedback_generator_tmp = DataProcHiveOperator(
 
 #query 2
 
-gslocation_feedback_table = 'gs://hike_staging/v1/simulation/feedback_table'
+gslocation_feedback_table = 'gs://stage/v1/simulation/feedback_table'
 hive_query_staging_feedback_generator = Template('''
 SET hive.exec.dynamic.partition.mode=nonstrict;
 SET hive.exec.dynamic.partition=true;
@@ -118,7 +118,7 @@ hive_job_staging_feedback_generator = DataProcHiveOperator(
 
 #query 3
 
-gslocation_prior_table = 'gs://hike_staging/v1/simulation/prior_table'
+gslocation_prior_table = 'gs://stage/v1/simulation/prior_table'
 hive_query_staging_prior_generator = Template('''
 SET hive.exec.dynamic.partition.mode=nonstrict;
 SET hive.exec.dynamic.partition=true;
